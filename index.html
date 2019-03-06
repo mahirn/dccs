@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DCCS Assignment</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="tab">
+      <button class="tabButtons mainButtons" id="administrationTab" onclick="openTab(event, 'Administration')">Administration</button>
+      <button class="tabButtons mainButtons" onclick="openTab(event, 'Formular')">Formular</button>
+    </div>
+
+    <!--Contents of the "Administration" tab-->
+    <div id="Administration" class="tabContent">
+      <!--Default form template-->
+      <div id="searchFormularsInput">
+        Formular name: <input type="text" id="formularName"> <button class="mainButtons" type="button" onclick="search()">Search</button>
+      </div>
+      <div id="searchDisplay">
+        <div id="formDisplay" class="inline">
+          <form name="form1" id="form1" class="formTemplate">
+            <label class="label1">Element 1 </label><input type="text" name="elementLabel" class="elementLabels" placeholder="Label 1">
+            <select name="sel1" class="select1" id="select1" onchange="radioSelection()">
+              <option name="opt1" value="textarea">Textbox</option>
+              <option name="opt2" value="checkbox">Checkbox</option>
+              <option name="opt3" value="radio">Radio buttons</option>
+            </select>
+            <select name="sel2" class="select2">
+              <option name="opt1" value="mandatory">Mandatory</option>
+              <option name="opt2" value="numeric">Numeric</option>
+              <option name="opt3" value="none">None</option>
+            </select>
+            <span class="radioLabelSpan">
+              <!--Placeholder for radio labels--></span>
+          </form>
+        </div>
+        <button type="button" onclick="addForm()" class="inline mainButtons" id="plusButton">+</button>
+        <button type="button" class="mainButtons saveFormButton" onclick="saveForm()">Save</button>
+      </div>
+    </div>
+
+    <!--Contents of the "Formular" tab-->
+    <div id="Formular" class="tabContent">
+      Formular name: <select id="formularSelect"></select>
+      <label id="versionLabel" for="versionInput">Version</label> <input type="text" value="1" id="versionInput" name="version">
+      <button type="button" class="mainButtons" name="loadButton" id="loadButton" onclick="load()">Load</button>
+      <div id="formLoaded">
+      </div>
+      <button type="button" class="mainButtons saveFormButton" onclick="saveFormFilled()">Save</button>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

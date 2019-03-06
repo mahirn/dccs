@@ -1,0 +1,102 @@
+body {
+  font-family: verdana;
+}
+
+#wrapper {
+  max-width: 800px;
+  min-height: 500px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.mainButtons {
+  cursor: pointer;
+}
+
+.tab {
+  overflow: hidden;
+  width: 250px;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  width: 125px;
+  float: left;
+  border: 1px thin;
+  outline: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.tab button:hover {
+  background-color: inherit;
+}
+
+.tab button.active {
+  background-color: #fff;
+}
+
+.tabContent {
+  margin: 15px 20px 50px;
+  display: none;
+  border-top: none;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#searchDisplay {
+  display: none;
+  padding-top: 20px;
+}
+
+
+.saveFormButton {
+  right: 30px;
+  bottom: 20px;
+  position: absolute;
+}
+
+#formLoaded {
+  margin-top: 20px;
+}
+
+/*Align the aded radio label inputs with the input type selection*/
+.radioLabelSpan input {
+  display: block;
+  margin-left: 266px;
+}
+
+.select1 {
+  width: 173px;
+}
+
+#versionInput {
+  width: 25px;
+  margin-right: 30px;
+}
+
+#versionLabel {
+  margin-left: 10px;
+}
+
+.radioElement {
+  margin-left: 15px
+}
+
+.in1 {
+  margin-left: 15px;
+}
+
+input[type='radio'] {
+    cursor: pointer ;
+}
+
+input[type='checkbox'] {
+    cursor: pointer ;
+}
